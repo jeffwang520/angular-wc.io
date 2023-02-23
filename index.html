@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Angular Web Component-Test Suite</title>
+
+    <script type="text/javascript" src="./angular-output/polyfills.js"></script>
+    <script type="text/javascript" src="./angular-output/runtime.js"></script>
+    <script type="text/javascript" src="./angular-output/main.js"></script>
+    <script type="text/javascript" src="./bootstrap/js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="./angular-output/styles.css" />
+    <script type="text/javascript" src="./jquery/jquery-3.6.3.js"></script>
+    <script type="text/javascript" src="./script/index.js"></script>
+    <script type="text/javascript" src="./script//test-data.js"></script>
+    <script type="text/javascript" src="./script//tools.js"></script>
+  </head>
+
+  <body>
+    <div class="container" style="margin-top: 10px; width: 900px">
+      <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="bootstrap-tab" data-bs-toggle="pill" data-bs-target="#bootstrap-content" type="button" role="tab">
+            Bootstrap
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="card-tab" data-bs-toggle="pill" data-bs-target="#card-content" type="button" role="tab">Card</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="hello-tab" data-bs-toggle="pill" data-bs-target="#hello-content" type="button" role="tab">Hello</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="input-tab" data-bs-toggle="pill" data-bs-target="#input-content" type="button" role="tab">Input</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="popup-tab" data-bs-toggle="pill" data-bs-target="#popup-content" type="button" role="tab">Popup</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="table-tab" data-bs-toggle="pill" data-bs-target="#table-1-content" type="button" role="tab">Table-1</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="table-tab" data-bs-toggle="pill" data-bs-target="#table-2-content" type="button" role="tab">Table-2</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="table-tab" data-bs-toggle="pill" data-bs-target="#table-3-content" type="button" role="tab">Table-3</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="table-tab" data-bs-toggle="pill" data-bs-target="#table-4-content" type="button" role="tab">Table-4</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="table-tab" data-bs-toggle="pill" data-bs-target="#table-5-content" type="button" role="tab">Table-5</button>
+        </li>
+      </ul>
+      <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="bootstrap-content" role="tabpanel" aria-labelledby="bootstrap-tab" tabindex="0">
+          <div class="card">
+            <div class="card-header">Test Angular Web Component Bootstrap - Address</div>
+            <div class="card-body"><my-custom-web-component-bootstrap-address></my-custom-web-component-bootstrap-address></div>
+          </div>
+          <br />
+          <div class="card">
+            <div class="card-header">Test Angular Web Component Bootstrap - Dropdown</div>
+            <div class="card-body"><my-custom-web-component-bootstrap-dropdown></my-custom-web-component-bootstrap-dropdown></div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="card-content" role="tabpanel" aria-labelledby="card-tab" tabindex="0">
+          <div class="card">
+            <div class="card-header">Test Angular Web Component Card</div>
+            <div class="card-body">
+              <my-custom-web-component-card
+                id="card_component"
+                title="Custom Element-Card"
+                name="Donna Marshall"
+                caption="Lorem ipsum dolor sit, amet consectetur adipisicing elit."
+                avtar="https://www.w3schools.com/w3images/avatar5.png"
+                image="https://images.pexels.com/photos/169193/pexels-photo-169193.jpeg?w=940&h=650&auto=compress&cs=tinysrgb"
+              >
+              </my-custom-web-component-card>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="hello-content" role="tabpanel" aria-labelledby="hello-tab" tabindex="0">
+          <div class="card">
+            <div class="card-header">Test Angular Web Component Card</div>
+            <div class="card-body">
+              <my-custom-web-component-hello></my-custom-web-component-hello>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="input-content" role="tabpanel" aria-labelledby="input-tab" tabindex="0">
+          <div class="card">
+            <div class="card-header">Angular Input Web Component - Container</div>
+            <div class="card-body">
+              <my-custom-web-component-input id="input_wc_element"></my-custom-web-component-input>
+            </div>
+          </div>
+          <div class="card" style="margin-top: 10px">
+            <div class="card-header">Angular Input Web Component - Tester</div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-6">
+                  <label for="input_request_title" class="col-sm-4 col-form-label">Request Title</label>
+                  <input class="form-control" id="input_request_title" />
+                </div>
+                <div class="col-6">
+                  <label for="input_response_title" class="col-sm-4 col-form-label">Response Title</label>
+                  <input class="form-control" id="input_response_title" readonly disabled />
+                </div>
+              </div>
+              <div class="row" style="margin-top: 10px">
+                <div class="col-6 text-center">
+                  <button class="btn btn-small btn-primary" id="input_set_title_button">Set Title</button>
+                </div>
+                <div class="col-6 text-center">
+                  <button class="btn btn-small btn-info" id="input_get_title_button">Get Title</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="popup-content" role="tabpanel" aria-labelledby="popup-tab" tabindex="0">
+          <div class="card">
+            <div class="card-header">Test Angular Web Component Popup</div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col">
+                  <label for="popup_message"><strong>Popup Message</strong></label>
+                  <input type="text" class="form-control" id="popup_message" placeholder="Popup message" />
+                </div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="row text-center">
+                <div class="col">
+                  <button type="button" id="popup_button" class="btn btn-warning">Show as Element</button>
+                </div>
+                <div class="col">
+                  <button type="button" id="popup_button_show_alert" class="btn btn-success">Show Alert</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container" id="popup_element_container"></div>
+        </div>
+        <div class="tab-pane fade" id="table-1-content" role="tabpanel" aria-labelledby="table-1-tab" tabindex="0">
+          <div class="card">
+            <div class="card-header">Test Angular Web Component - Table Case 1(Basic)</div>
+            <div class="card-body">
+              <my-custom-web-component-table id="table-wc-1"></my-custom-web-component-table>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="table-2-content" role="tabpanel" aria-labelledby="table-2-tab" tabindex="0">
+          <div class="card">
+            <div class="card-header">Test Angular Web Component - Table Case 2(Select Box)</div>
+            <div class="card-body">
+              <my-custom-web-component-table id="table-wc-2"></my-custom-web-component-table>
+            </div>
+            <div class="card-footer">
+              <div class="row text-center">
+                <div class="col">
+                  <button type="button" id="table_2_siggle" class="btn btn-success">Single Select</button>
+                </div>
+                <div class="col">
+                  <button type="button" id="table_2_multiple" class="btn btn-warning">Multiple Select</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="table-3-content" role="tabpanel" aria-labelledby="table-3-tab" tabindex="0">
+          <div class="card">
+            <div class="card-header">Test Angular Web Component - Table Case 3(Sort with Page Records)</div>
+            <div class="card-body">
+              <my-custom-web-component-table id="table-wc-3"></my-custom-web-component-table>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="table-4-content" role="tabpanel" aria-labelledby="table-4-tab" tabindex="0">
+          <div class="card">
+            <div class="card-header">Test Angular Web Component - Table Case 4(Sort with Database Records)</div>
+            <div class="card-body">
+              <my-custom-web-component-table id="table-wc-4"></my-custom-web-component-table>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="table-5-content" role="tabpanel" aria-labelledby="table-5-tab" tabindex="0">
+          <div class="card">
+            <div class="card-header">Test Angular Web Component - Table Case 5(Record Action Button)</div>
+            <div class="card-body">
+              <my-custom-web-component-table id="table-wc-5"></my-custom-web-component-table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container" style="margin-top: 20px; width: 900px">
+      <div class="row">
+        <div class="col"><div id="_global_alert_container"></div></div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="table_user_modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-lg" style="width: 600px">
+        <div class="modal-content">
+          <my-custom-web-component-user id="table_user_component_element"></my-custom-web-component-user>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
